@@ -1,7 +1,4 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:meals_app/models/category.dart';
 import 'package:meals_app/widgets/meal_item.dart';
 import '../models/meal.dart';
 
@@ -10,13 +7,12 @@ class CategoryMealsScreen extends StatefulWidget {
 
   final List<Meal> availableMeals;
 
-  CategoryMealsScreen(this.availableMeals);
+  const CategoryMealsScreen(this.availableMeals, {super.key});
   @override
   State<CategoryMealsScreen> createState() => _CategoryMealsScreenState();
 }
 
 class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
-  // final String categoryId;
   String? categoryTitle;
   List<Meal>? displayedMeals;
   var _loadedInitData = false;
